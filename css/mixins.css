@@ -1,0 +1,19 @@
+.CommentMixin {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #9c9c9c;
+  padding: 15px 20px;
+  line-height: 1.692;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  height: 50px;
+}
+.CommentMixin li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 18px;
+}
+.CommentMixin li i {
+  margin-right: 8px;
+}

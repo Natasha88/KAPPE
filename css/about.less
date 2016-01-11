@@ -1,0 +1,329 @@
+@import (reference) "mixins.less";
+@import (reference) "vars.less";
+* {
+	margin: 0;
+	padding: 0;
+}
+body, html {
+	height: 100%;
+}
+.wrapper {
+  position: relative;
+  width: 2000px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/// ***** NAVIGATION SECTION **** ///
+
+.leftSrctionWrapper {
+	position: absolute; 
+	width: @navWidth; 
+	height: 100%; 
+	background-color: #242b2e;
+}
+.leftSection {
+	position: relative;
+  	float: left;
+	width: @navWidth;
+	height: 100%;
+	display: block;
+
+}
+.logo {
+	// display: block;
+	// position: absolute;
+	width: @navWidth;
+	height: 124px;
+	background-image: url("img/logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #ffffff;
+}
+.navMask {
+	display: block;
+	position: absolute;
+	width: @navWidth;
+	height: 100%;
+	background: #242b2e;
+	left: 0;
+}
+.nav {
+	background-color: #242b2e;
+	position: relative;
+}
+.navBlock {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 4%) 100%);
+}
+
+.navItem {
+	.FontMixin (@fontMain; 18px; @fontLight; #ffffff; @paddingNav);
+	list-style: none;
+	background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 2%) 100%);
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 2%) 100%);
+	background: linear-gradient(to top, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 2%) 100%);
+	border-bottom: 1px solid #282828;
+	text-shadow: 0.5px 0.866px 4px rgb( 0, 0, 0 );
+	text-align: right;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.2s linear;
+	a {
+		text-decoration: none;
+		color: #ffffff;
+		text-shadow: 0.5px 0.866px 4px rgb( 0, 0, 0 );
+	}
+	&:nth-child(3) {
+		background-color: #1ab5b3;
+		background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+	}
+	&:hover {
+		background-color: #1ab5b3;
+		background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		transition: all 0.4s linear;
+	}
+}
+
+.filter {
+	.FontMixin (@fontMain; 14px; @fontLight; none; @paddingNav);
+	text-align: right;
+	line-height: 1.846;
+	text-shadow: 0.5px 0.866px 4px rgb( 0, 0, 0 );
+	border-bottom: 1px solid #282828;
+	li {
+	list-style: none;
+	}
+}
+
+.filterBig {
+	color: #1ab5b3;
+	font-weight: @fontThin;
+	font-size: 19px;
+	padding-bottom: 9px;
+	line-height: 1.684;
+	li {
+		display: inline-block;
+		list-style-type: none;
+		i {
+			margin-left: 11px;
+		}
+	}
+}
+.filterMain {
+	color: #ffffff;
+}
+.filterSmall {
+	color: #9b9ea0;
+}
+.social {
+	float: right;
+	margin-left: 10px;
+	margin-top: 28px; 
+	width: 24px;
+	height: 24px;
+	background-image: url("img/sprites1.png");
+	border-radius: 4px;
+	transition: all 0.3s ease-in-out;
+}
+.social:hover {
+	transform: scale(1.15, 1.15);
+	transition: all 0.3s ease-in-out;
+}
+.social:first-child {
+	margin-right: 24px;
+}
+.socialFlickr {
+	background-position: 0 0;
+}
+.socialG {
+	background-position: -23.5px 0;
+}
+
+.socialDribbble {
+	background-position: -95px -0px;
+}
+
+.socialFb{
+	background-position: -143px 0;
+}
+
+.socialPin {
+	background-position: -71.5px 0;
+}
+
+.socialTwit {
+	background-position: -48px 0;
+}
+ 
+.socialBehance {
+	background-position: -120px 0 ;
+}
+
+.copyrights {
+	.FontMixin (@fontMain, 12px, @fontThin, #9b9ea0, @paddingNav);
+	text-align: right;
+} 
+
+/// ***** ABOUT CONTENT SECTION **** ///
+
+.contentMask {
+	box-sizing: border-box;
+	display: block;
+	position:relative;
+	left: @navWidth;
+	height: 100%;
+	background: #ffffff;
+}
+.contentWrapper {
+  position: relative;
+  float: left;
+  min-height: 100%;
+  border: 25px solid #d6d8d8;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.content {
+	height: 100%;
+	padding: 30px;
+}
+.mainContent {
+	position: relative;
+	float: left;
+	width: 730px;
+	padding: 0;
+	padding-right: 30px;
+	border-right: @border;
+	height: 100%;
+	h2 {
+	.FontMixin (@fontMain; @fontSizeH2; @fontThin; #000000; 24px 0);
+	line-height: 1.083;
+	}
+	p {
+	.FontMixin (@fontMain; @fontSizeP; @fontLight; #a3a3a3; 0 0 30px 0);
+	line-height: 1.667;	
+	}
+}
+.mainImg {
+	width: 721px;
+	height: 302px;
+	background-image: url("img/aboutMainImg.png");
+}
+
+.line {
+	border-bottom: @border;
+}
+
+.staff {
+	margin-right: -30px;
+}
+.staffImg {
+	display: inline-block;
+	margin: 0 20px 20px 0;
+	width: 227px;
+	height: 180px;
+	background-image: url("img/staff.png");
+	transition: all 0.3s linear;
+	&:hover {
+	background-image: url("img/staffHover.png");
+	transition: all 0.3s linear;
+	}
+}
+
+.staffYou {
+	display: inline-block;
+	margin: 0 20px 20px 0;
+	width: 227px;
+	height: 180px;
+	background-image: url("img/staffYou.png");
+	transition: all 0.2s linear;
+}
+
+.sidebar {
+	position: relative;
+	float: left;
+	width: 730px;
+	padding-left: 30px;
+	h2{
+	.FontMixin (@fontMain; @fontSizeH2; @fontThin; #000000; 24px 0);
+	line-height: 1.083;
+	}
+	h2:first-child {
+	padding-top: 0;
+	}
+}
+
+.skills { 
+	.FontMixin (@fontMain; 15px; @fontLight; #000000; none);
+	width:  730px;
+	margin: 5px 0;
+}
+.rightcol {
+	.FontMixin (@fontMain; 14px; @fontLight; #000000; none);
+	line-height: 1.857;
+	text-align: right;
+}
+.skillsProgress {
+	width: 720px;
+	height: 34px;
+	border: @border;
+	&::-webkit-progress-bar {
+	background-color: #ffffff;
+	}
+	&::-webkit-progress-value {
+	background-color: #e2e2e2;
+	}
+}
+.testimonials {
+	width: 730px;
+	height: 210px;
+}
+.testLeft {
+	width: 80px;
+	height: 80px;
+	background-image: url("img/80x80.png");
+	float: left;
+}
+.testRight {
+	.FontMixin (@fontMain; 15px; none; #ffffff; 33px 33px 33px 22px);
+	height: 80px;
+	width: 650px;
+	float: left;
+	background-color: #1bb5b3;
+	font-style: italic;
+	box-sizing: border-box;
+}
+.testMain {
+	.FontMixin (@fontMain; @fontSizeP; @fontLight; #a3a3a3; 16px 30px);
+	width: 730px;
+	height: 130px;
+	box-sizing: border-box;
+	float: left;
+	border: @border;
+	border-top: 0;
+	line-height: 1.667;
+}
+.services {
+	color:  #a3a3a3;
+	font-family: @fontMain;
+	font-weight: @fontLight;
+	line-height: 2;
+	font-size: 13px;
+	margin-left: 20px;
+}
+.clearfix {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+

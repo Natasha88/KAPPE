@@ -1,0 +1,333 @@
+@import (reference) "mixins.less";
+@import (reference) "vars.less";
+* {
+	margin: 0;
+	padding: 0;
+}
+body, html {
+	height: 100%;
+}
+.wrapper {
+  position: relative;
+  width: 2000px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/// ***** NAVIGATION SECTION **** ///
+
+.leftSrctionWrapper {
+	position: absolute; 
+	width: @navWidth; 
+	height: 100%; 
+	background-color: #242b2e;
+}
+.leftSection {
+	position: relative;
+  	float: left;
+	width: @navWidth;
+	height: 100%;
+	display: block;
+
+}
+.logo {
+	// display: block;
+	// position: absolute;
+	width: @navWidth;
+	height: 124px;
+	background-image: url("img/logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #ffffff;
+}
+.navMask {
+	display: block;
+	position: absolute;
+	width: @navWidth;
+	height: 100%;
+	background: #242b2e;
+	left: 0;
+}
+.nav {
+	background-color: #242b2e;
+	position: relative;
+}
+.navBlock {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 4%) 100%);
+}
+
+.navItem {
+	.FontMixin (@fontMain; 18px; @fontLight; #ffffff; @paddingNav);
+	list-style: none;
+	background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 2%) 100%);
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 2%) 100%);
+	background: linear-gradient(to top, rgba(0, 0, 0, 2%) 0%, rgba(255, 255, 255, 2%) 100%);
+	border-bottom: 1px solid #282828;
+	text-shadow: 0.5px 0.866px 4px rgb( 0, 0, 0 );
+	text-align: right;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.2s linear;
+	a {
+		text-decoration: none;
+		color: #ffffff;
+		text-shadow: 0.5px 0.866px 4px rgb( 0, 0, 0 );
+	}
+	&:nth-child(2) {
+		background-color: #1ab5b3;
+		background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+	}
+	&:hover {
+		background-color: #1ab5b3;
+		background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 10%) 0%, rgba(255, 255, 255, 2%) 100%);
+		transition: all 0.4s linear;
+	}
+}
+
+.filter {
+	.FontMixin (@fontMain; 14px; @fontLight; none; @paddingNav);
+	text-align: right;
+	line-height: 1.846;
+	text-shadow: 0.5px 0.866px 4px rgb( 0, 0, 0 );
+	border-bottom: 1px solid #282828;
+	li {
+	list-style: none;
+	}
+}
+
+.filterBig {
+	color: #1ab5b3;
+	font-weight: @fontThin;
+	font-size: 19px;
+	padding-bottom: 9px;
+	line-height: 1.684;
+	li {
+		display: inline-block;
+		list-style-type: none;
+		i {
+			margin-left: 11px;
+		}
+	}
+}
+.filterMain {
+	color: #ffffff;
+}
+.filterSmall {
+	color: #9b9ea0;
+}
+.social {
+	float: right;
+	margin-left: 10px;
+	margin-top: 28px; 
+	width: 24px;
+	height: 24px;
+	background-image: url("img/sprites1.png");
+	border-radius: 4px;
+	transition: all 0.3s ease-in-out;
+}
+.social:hover {
+	transform: scale(1.15, 1.15);
+	transition: all 0.3s ease-in-out;
+}
+.social:first-child {
+	margin-right: 24px;
+}
+.socialFlickr {
+	background-position: 0 0;
+}
+.socialG {
+	background-position: -23.5px 0;
+}
+
+.socialDribbble {
+	background-position: -95px -0px;
+}
+
+.socialFb{
+	background-position: -143px 0;
+}
+
+.socialPin {
+	background-position: -71.5px 0;
+}
+
+.socialTwit {
+	background-position: -48px 0;
+}
+ 
+.socialBehance {
+	background-position: -120px 0 ;
+}
+
+.copyrights {
+	.FontMixin (@fontMain, 12px, @fontThin, #9b9ea0, @paddingNav);
+	text-align: right;
+} 
+
+/// ***** MAIN SECTION **** ///
+
+.contentMask {
+	box-sizing: border-box;
+	display: block;
+	position:relative;
+	left: @navWidth;
+	height: 100%;
+	background: #ffffff;
+}
+.contentWrapper {
+  position: relative;
+  float: left;
+  min-height: 100%;
+  border: 25px solid #d6d8d8;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.content {
+	height: 100%;
+	padding: 30px;
+}
+.mainContent {
+	position: relative;
+	float: left;
+	width: 721px;
+	padding: 0;
+	padding-right: 30px;
+	border-right: @border;
+	height: 100%;
+	h2 {
+		.FontMixin (@fontMain; @fontSizeH2; @fontLight; #000000; 24px 0);
+		line-height: 1.083;
+	}
+	p {
+		.FontMixin (@fontMain; @fontSizeP; @fontLight; #a3a3a3;  0 0 24px 0);
+		line-height: 1.667;
+	&:nth-child(2n) {
+		padding: 24px 0 0 0;
+	}	
+	}	
+}
+
+.mainImg {
+	width: 721px;
+	height: 560px;
+	background-image: url("img/workMainImg.png");
+}
+
+.line {
+	margin-top: 30px;
+	border-bottom: @border;
+}
+.project {
+	margin-bottom: 30px;
+	font-size:0;
+	line-height:0;
+
+}
+
+.projectImg {
+	display: inline-block;
+	width: 240px;
+	height: 182px;
+	background-image: url("img/projectImg.png");
+	&:nth-child(2) {
+		background-image: url("img/projectImg2.png");
+	}
+}
+
+.sidebar {
+	position: relative;
+	float: left;
+	width: 721px;
+	padding-left: 30px;
+	h2{
+	.FontMixin (@fontMain; @fontSizeH2; @fontLight; #000000; 18px 0);
+	line-height: 1.083;
+	}
+	h2:first-child {
+	padding-top: 0;
+	}
+}
+
+.pInfo {
+	width: 720px;
+	li {
+		list-style: none;
+		border-bottom: @border;
+		padding: 14px 0;
+		&:first-child {
+			padding-top: 0;
+		}
+		span {
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			border: 1px solid #1ab5b3;
+			text-align: center;
+			border-radius: 50%;
+			margin-right: 14px;
+			i {
+				color: #1ab5b3;
+				line-height: 32px;
+				font-size: 14px;
+			}
+		}
+		p {
+			display: inline-block;
+			.FontMixin (@fontMain; 14px; @fontLight; #848484; none);
+		}
+	}
+}
+
+
+.tags {
+	li {
+		.FontMixin (@fontMain; 13px; @fontLight; #a3a3a3; 9px 17px);
+		display: inline-block;
+		margin-right: 8px;
+		margin-bottom: 10px;
+		list-style: none;
+		display: inline-block;
+		border-radius: 10px;
+		border: 1px solid #dbdbdb;
+	}
+}
+.gallery {
+	font-size: 0;
+}
+.galleryImg {
+	margin-right: 12px;
+	margin-bottom: 12px;
+	display: inline-block;
+	width: 78px;
+	height: 78px;
+	background-image: url("img/78x78.png");
+}
+.features {
+	.FontMixin (@fontMain; 14px; @fontLight; #a3a3a3; none);
+	line-height: 2.143;
+	li {
+		list-style: none;
+
+		i {
+			margin-right: 8px;
+		} 
+	}
+}
+.clearfix {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+

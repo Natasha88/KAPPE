@@ -1,0 +1,41 @@
+@import (reference) "vars.less";
+
+.FontMixin (@font; @fontSize; @fontWeight; @color; @padding) {
+	font-family: @font;
+	font-size: @fontSize;
+	font-weight: @fontWeight;
+	color: @color;
+	padding: @padding;
+}
+.TextMixin () {
+	box-sizing: border-box;
+	height: 127px;
+	width: @blockWidth;
+	background: #ffffff;
+	padding: 15px 20px;
+	border-bottom: @border;
+	h2 {
+		.FontMixin (@fontMain; 18px; @fontLight; #000000; none);
+		margin: 0 0 4px;
+		line-height: 1.444;
+	}
+	p {
+		.FontMixin (@fontMain; 13px; @fontLight; #9c9c9c; none);
+		line-height: 1.692;
+	}
+}
+.CommentMixin {
+	.FontMixin (@fontMain; 13px; @fontLight; #9c9c9c; 15px 20px);
+	line-height: 1.692;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	height: 50px;
+	li {
+		display: inline-block;
+		list-style-type: none;
+		margin-right: 18px;
+		i {
+			margin-right: 8px;
+		}
+	}
+}
