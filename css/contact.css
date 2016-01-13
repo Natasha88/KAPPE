@@ -81,7 +81,7 @@ html {
   color: #ffffff;
   text-shadow: 0.5px 0.866px 4px #000000;
 }
-.navItem:nth-child(4) {
+.navItem:nth-child(6) {
   background-color: #1ab5b3;
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
   background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
